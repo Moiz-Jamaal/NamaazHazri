@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://ejas.its52.com/ejamaatservices.asmx?wsdl" docRef="https://ejas.its52.com/ejamaatservices.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://ejas.its52.com/ejamaatservices.asmx" xmlns:q1="http://localhost/eJAS/EjamaatServices" binding="q1:EjamaatServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://ejas.its52.com/ejamaatservices.asmx" xmlns:q2="http://localhost/eJAS/EjamaatServices" binding="q2:EjamaatServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

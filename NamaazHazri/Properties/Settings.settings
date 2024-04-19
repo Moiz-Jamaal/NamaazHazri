@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="NamaazHazri.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="NamaazHazri_ITSWS_EjamaatService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://ejas.its52.com/ejamaatservices.asmx</Value>
+    </Setting>
+    <Setting Name="NamaazHazri_KarachiWS_AJSServices" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://karachi.jameasaifiyah.edu/AJSWebservices/AJSServices.asmx</Value>
+    </Setting>
+    <Setting Name="NamaazHazri_MarolWS_AJSServices" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://marol.jameasaifiyah.edu/AJSWebservices/AJSServices.asmx</Value>
+    </Setting>
+    <Setting Name="NamaazHazri_SuratWS_AJSServices" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://jameasaifiyah.com/AJSWebservices/AJSServices.asmx</Value>
+    </Setting>
+    <Setting Name="NamaazHazri_NairobiWS_AJSServices" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://nairobi.jameasaifiyah.edu/AJSWebservices/AJSServices.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="UpdateNamaazHazri">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TrNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PassKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateNamaazHazriResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateNamaazHazriResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="UpdateNamaazHazriSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateNamaazHazri" />
+  </wsdl:message>
+  <wsdl:message name="UpdateNamaazHazriSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateNamaazHazriResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateNamaazHazriHttpGetIn">
+    <wsdl:part name="TrNo" type="s:string" />
+    <wsdl:part name="PassKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateNamaazHazriHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="AJSServicesSoap">
+    <wsdl:operation name="UpdateNamaazHazri">
+      <wsdl:input message="tns:UpdateNamaazHazriSoapIn" />
+      <wsdl:output message="tns:UpdateNamaazHazriSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="AJSServicesHttpGet">
+    <wsdl:operation name="UpdateNamaazHazri">
+      <wsdl:input message="tns:UpdateNamaazHazriHttpGetIn" />
+      <wsdl:output message="tns:UpdateNamaazHazriHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AJSServicesSoap" type="tns:AJSServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateNamaazHazri">
+      <soap:operation soapAction="http://tempuri.org/UpdateNamaazHazri" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AJSServicesSoap12" type="tns:AJSServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateNamaazHazri">
+      <soap12:operation soapAction="http://tempuri.org/UpdateNamaazHazri" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AJSServicesHttpGet" type="tns:AJSServicesHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="UpdateNamaazHazri">
+      <http:operation location="/UpdateNamaazHazri" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AJSServices">
+    <wsdl:port name="AJSServicesSoap" binding="tns:AJSServicesSoap">
+      <soap:address location="http://nairobi.jameasaifiyah.edu/AJSWebservices/AJSServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AJSServicesSoap12" binding="tns:AJSServicesSoap12">
+      <soap12:address location="http://nairobi.jameasaifiyah.edu/AJSWebservices/AJSServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AJSServicesHttpGet" binding="tns:AJSServicesHttpGet">
+      <http:address location="http://nairobi.jameasaifiyah.edu/AJSWebservices/AJSServices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
